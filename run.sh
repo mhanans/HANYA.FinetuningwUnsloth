@@ -19,13 +19,11 @@ function check_path_for_spaces() {
 
 function check_gpu() {
     if ! command -v nvidia-smi &> /dev/null; then
-        echo "NVIDIA GPU not detected. This script requires a CUDA-compatible GPU."
-        exit 1
+        echo "Warning: NVIDIA GPU not detected. This script requires a CUDA-compatible GPU to works normally."
     fi
     local gpu_count=$(nvidia-smi --query-gpu=count --format=csv,noheader | wc -l)
     if [ "$gpu_count" -eq 0 ]; then
-        echo "No NVIDIA GPU detected. Please ensure your GPU drivers are installed."
-        exit 1
+        echo "Warning: No NVIDIA GPU detected. Please ensure your GPU drivers are installed."
     fi
     echo "GPU detected: $(nvidia-smi --query-gpu=name --format=csv,noheader)"
 }
