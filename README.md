@@ -44,4 +44,8 @@ The application is designed to be modular, with each component in its own Python
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/mhanans/HANYA.FinetuningwUnsloth.git
-   cd HANYAFT
+   cd HANYA.FinetuningwUnsloth
+
+2. **Just Run**:
+   ```bash
+   bash run.sh
