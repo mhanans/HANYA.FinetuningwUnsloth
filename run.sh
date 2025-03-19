@@ -94,7 +94,7 @@ function install_dependencies() {
     }
 
     echo "Installing additional dependencies..."
-    pip install transformers datasets gradio trl peft accelerate bitsandbytes triton docling || {
+    pip install transformers datasets gradio trl peft accelerate bitsandbytes triton docling PyPDF2 || {
         echo "Failed to install additional dependencies."
         exit 1
     }
