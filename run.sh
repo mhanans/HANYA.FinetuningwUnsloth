@@ -114,13 +114,13 @@ SCRIPT_DIR=$(dirname "$0")
 # Check for too many arguments
 if [ $# -gt 1 ]; then
     echo "Usage: $0 [documents_folder]"
-    echo "If no folder is provided, it will use the default: $SCRIPT_DIR/dataset"
+    echo "If no folder is provided, it will use the default: $SCRIPT_DIR/dataset-doc"
     exit 1
 fi
 
 # Set DOCUMENTS_FOLDER: default if no argument, otherwise use provided path
 if [ $# -eq 0 ]; then
-    DOCUMENTS_FOLDER="$SCRIPT_DIR/dataset"
+    DOCUMENTS_FOLDER="$SCRIPT_DIR/dataset-doc"
 else
     DOCUMENTS_FOLDER="$1"
 fi
